@@ -15,10 +15,10 @@ HeLLo 我是来自20级计算机5班的姜前辰，目前学习的是**性能优
 
 想说的话：
 
+AND SO ON
 
-![图片](https://user-images.githubusercontent.com/111861051/198684660-2185c822-10ef-4ced-aedf-5900238f0ab2.png width="50%" height="50%")
 
-
+<img src="https://user-images.githubusercontent.com/111861051/198684660-2185c822-10ef-4ced-aedf-5900238f0ab2.png" width="50%" height="50%">
 ----
 
 # 作业介绍
