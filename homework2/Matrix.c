@@ -224,20 +224,20 @@ void matrix_multiply_simd(){
 }
 
 void matrix_plus_omp(){
-    #pragma omp parallel num_threads(thread_count)
+    #pragma omp parallel for num_threads(thread_count)
     for(int i=0; i< row * col; i++){
         plus_res[i] = matrix1[i] + matrix1[i];
     }
 }
 void matrix_minus_omp(){
-    #pragma omp parallel num_threads(thread_count)
+    #pragma omp parallel for num_threads(thread_count)
     for(int i=0; i< row * col; i++){
         minus_res[i] = matrix1[i] - matrix1[i];
     }
 }
 void matrix_multiply_omp(){
     for(int r=0; r < row; r++){
-        #pragma omp parallel num_threads(thread_count)
+        #pragma omp parallel for num_threads(thread_count)
         for(int c=0; c < col; c++){
             multiply_res[r * col + c] = 0;
             for(int i=0; i < col; i++){
