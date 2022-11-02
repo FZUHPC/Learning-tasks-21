@@ -79,6 +79,7 @@ void dj(){
             }
             if(!trash_node[i] && dis[i] > d + cur.dis){
                 dis[i] = d + cur.dis;
+                #pragma omp atomic
                 queue_push((node){i, d + cur.dis});
             }
         }
