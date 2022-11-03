@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "unistd.h": "c",
+        "user-thread.h": "c",
+        "scheduler.h": "c",
+        "stdint.h": "c",
+        "signal.h": "c",
+        "time.h": "c",
+        "timer.h": "c",
+        "string.h": "c",
+        "pthread.h": "c"
+    }
+}
