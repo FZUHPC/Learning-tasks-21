@@ -1,0 +1,189 @@
+================================================================================
+HPLinpack 2.3  --  High-Performance Linpack benchmark  --   December 2, 2018
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N      :   15312 
+NB     :     128 
+PMAP   : Row-major process mapping
+P      :       1 
+Q      :       2 
+PFACT  :   Right 
+NBMIN  :       2 
+NDIV   :       2 
+RFACT  :   Right 
+BCAST  :   1ring 
+DEPTH  :       0 
+SWAP   : Mix (threshold = 64)
+L1     : transposed form
+U      : transposed form
+EQUIL  : yes
+ALIGN  : 8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               2.220446e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+Column=000000128 Fraction= 0.8% Gflops=6.544e+01
+Column=000000256 Fraction= 1.7% Gflops=6.657e+01
+Column=000000384 Fraction= 2.5% Gflops=6.756e+01
+Column=000000512 Fraction= 3.3% Gflops=6.566e+01
+Column=000000640 Fraction= 4.2% Gflops=6.480e+01
+Column=000000768 Fraction= 5.0% Gflops=6.539e+01
+Column=000000896 Fraction= 5.9% Gflops=6.604e+01
+Column=000001024 Fraction= 6.7% Gflops=6.651e+01
+Column=000001152 Fraction= 7.5% Gflops=6.697e+01
+Column=000001280 Fraction= 8.4% Gflops=6.686e+01
+Column=000001408 Fraction= 9.2% Gflops=6.679e+01
+Column=000001536 Fraction=10.0% Gflops=6.683e+01
+Column=000001664 Fraction=10.9% Gflops=6.701e+01
+Column=000001792 Fraction=11.7% Gflops=6.677e+01
+Column=000001920 Fraction=12.5% Gflops=6.662e+01
+Column=000002048 Fraction=13.4% Gflops=6.703e+01
+Column=000002176 Fraction=14.2% Gflops=6.716e+01
+Column=000002304 Fraction=15.0% Gflops=6.693e+01
+Column=000002432 Fraction=15.9% Gflops=6.700e+01
+Column=000002560 Fraction=16.7% Gflops=6.628e+01
+Column=000002688 Fraction=17.6% Gflops=6.533e+01
+Column=000002816 Fraction=18.4% Gflops=6.431e+01
+Column=000002944 Fraction=19.2% Gflops=6.349e+01
+Column=000003072 Fraction=20.1% Gflops=6.186e+01
+Column=000003200 Fraction=20.9% Gflops=6.037e+01
+Column=000003328 Fraction=21.7% Gflops=5.983e+01
+Column=000003456 Fraction=22.6% Gflops=5.950e+01
+Column=000003584 Fraction=23.4% Gflops=5.888e+01
+Column=000003712 Fraction=24.2% Gflops=5.812e+01
+Column=000003840 Fraction=25.1% Gflops=5.723e+01
+Column=000003968 Fraction=25.9% Gflops=5.708e+01
+Column=000004096 Fraction=26.8% Gflops=5.659e+01
+Column=000004224 Fraction=27.6% Gflops=5.620e+01
+Column=000004352 Fraction=28.4% Gflops=5.598e+01
+Column=000004480 Fraction=29.3% Gflops=5.570e+01
+Column=000004608 Fraction=30.1% Gflops=5.540e+01
+Column=000004736 Fraction=30.9% Gflops=5.502e+01
+Column=000004864 Fraction=31.8% Gflops=5.499e+01
+Column=000004992 Fraction=32.6% Gflops=5.486e+01
+Column=000005120 Fraction=33.4% Gflops=5.467e+01
+Column=000005248 Fraction=34.3% Gflops=5.457e+01
+Column=000005376 Fraction=35.1% Gflops=5.459e+01
+Column=000005504 Fraction=35.9% Gflops=5.442e+01
+Column=000005632 Fraction=36.8% Gflops=5.430e+01
+Column=000005760 Fraction=37.6% Gflops=5.386e+01
+Column=000005888 Fraction=38.5% Gflops=5.347e+01
+Column=000006016 Fraction=39.3% Gflops=5.324e+01
+Column=000006144 Fraction=40.1% Gflops=5.299e+01
+Column=000006272 Fraction=41.0% Gflops=5.271e+01
+Column=000006400 Fraction=41.8% Gflops=5.229e+01
+Column=000006528 Fraction=42.6% Gflops=5.205e+01
+Column=000006656 Fraction=43.5% Gflops=5.149e+01
+Column=000006784 Fraction=44.3% Gflops=5.118e+01
+Column=000006912 Fraction=45.1% Gflops=5.092e+01
+Column=000007040 Fraction=46.0% Gflops=5.059e+01
+Column=000007168 Fraction=46.8% Gflops=5.043e+01
+Column=000007296 Fraction=47.6% Gflops=5.039e+01
+Column=000007424 Fraction=48.5% Gflops=5.015e+01
+Column=000007552 Fraction=49.3% Gflops=5.006e+01
+Column=000007680 Fraction=50.2% Gflops=4.995e+01
+Column=000007808 Fraction=51.0% Gflops=4.994e+01
+Column=000007936 Fraction=51.8% Gflops=4.968e+01
+Column=000008064 Fraction=52.7% Gflops=4.965e+01
+Column=000008192 Fraction=53.5% Gflops=4.941e+01
+Column=000008320 Fraction=54.3% Gflops=4.933e+01
+Column=000008448 Fraction=55.2% Gflops=4.925e+01
+Column=000008576 Fraction=56.0% Gflops=4.909e+01
+Column=000008704 Fraction=56.8% Gflops=4.886e+01
+Column=000008832 Fraction=57.7% Gflops=4.874e+01
+Column=000008960 Fraction=58.5% Gflops=4.868e+01
+Column=000009088 Fraction=59.4% Gflops=4.859e+01
+Column=000009216 Fraction=60.2% Gflops=4.862e+01
+Column=000009344 Fraction=61.0% Gflops=4.862e+01
+Column=000009472 Fraction=61.9% Gflops=4.863e+01
+Column=000009600 Fraction=62.7% Gflops=4.859e+01
+Column=000009728 Fraction=63.5% Gflops=4.857e+01
+Column=000009856 Fraction=64.4% Gflops=4.857e+01
+Column=000009984 Fraction=65.2% Gflops=4.854e+01
+Column=000010112 Fraction=66.0% Gflops=4.852e+01
+Column=000010240 Fraction=66.9% Gflops=4.851e+01
+Column=000010368 Fraction=67.7% Gflops=4.853e+01
+Column=000010496 Fraction=68.5% Gflops=4.854e+01
+Column=000010624 Fraction=69.4% Gflops=4.852e+01
+Column=000010752 Fraction=70.2% Gflops=4.849e+01
+Column=000010880 Fraction=71.1% Gflops=4.842e+01
+Column=000011008 Fraction=71.9% Gflops=4.837e+01
+Column=000011136 Fraction=72.7% Gflops=4.830e+01
+Column=000011264 Fraction=73.6% Gflops=4.826e+01
+Column=000011392 Fraction=74.4% Gflops=4.823e+01
+Column=000011520 Fraction=75.2% Gflops=4.822e+01
+Column=000011648 Fraction=76.1% Gflops=4.824e+01
+Column=000011776 Fraction=76.9% Gflops=4.823e+01
+Column=000011904 Fraction=77.7% Gflops=4.823e+01
+Column=000012032 Fraction=78.6% Gflops=4.822e+01
+Column=000012160 Fraction=79.4% Gflops=4.821e+01
+Column=000012288 Fraction=80.3% Gflops=4.820e+01
+Column=000012416 Fraction=81.1% Gflops=4.821e+01
+Column=000012544 Fraction=81.9% Gflops=4.820e+01
+Column=000012672 Fraction=82.8% Gflops=4.820e+01
+Column=000012800 Fraction=83.6% Gflops=4.818e+01
+Column=000012928 Fraction=84.4% Gflops=4.818e+01
+Column=000013056 Fraction=85.3% Gflops=4.817e+01
+Column=000013184 Fraction=86.1% Gflops=4.816e+01
+Column=000013312 Fraction=86.9% Gflops=4.815e+01
+Column=000013440 Fraction=87.8% Gflops=4.815e+01
+Column=000013568 Fraction=88.6% Gflops=4.814e+01
+Column=000013696 Fraction=89.4% Gflops=4.814e+01
+Column=000013824 Fraction=90.3% Gflops=4.814e+01
+Column=000013952 Fraction=91.1% Gflops=4.814e+01
+Column=000014080 Fraction=92.0% Gflops=4.813e+01
+Column=000014208 Fraction=92.8% Gflops=4.813e+01
+Column=000014336 Fraction=93.6% Gflops=4.812e+01
+Column=000014464 Fraction=94.5% Gflops=4.812e+01
+Column=000014592 Fraction=95.3% Gflops=4.812e+01
+Column=000014720 Fraction=96.1% Gflops=4.812e+01
+Column=000014848 Fraction=97.0% Gflops=4.812e+01
+Column=000014976 Fraction=97.8% Gflops=4.811e+01
+Column=000015104 Fraction=98.6% Gflops=4.811e+01
+Column=000015232 Fraction=99.5% Gflops=4.811e+01
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WR00R2R2       15312   128     1     2              49.82             4.8044e+01
+HPL_pdgesv() start time Sat Nov  5 21:41:56 2022
+
+HPL_pdgesv() end time   Sat Nov  5 21:42:46 2022
+
+--VVV--VVV--VVV--VVV--VVV--VVV--VVV--VVV--VVV--VVV--VVV--VVV--VVV--VVV--VVV-
+Max aggregated wall time rfact . . . :               0.67
++ Max aggregated wall time pfact . . :               0.13
++ Max aggregated wall time mxswp . . :               0.03
+Max aggregated wall time update  . . :              46.85
++ Max aggregated wall time laswp . . :               1.51
+Max aggregated wall time up tr sv  . :               0.08
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=   2.10731576e-03 ...... PASSED
+================================================================================
+
+Finished      1 tests with the following results:
+              1 tests completed and passed residual checks,
+              0 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================
