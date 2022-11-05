@@ -560,11 +560,11 @@ int main(){
 
 > 第一种是将结果的矩阵每个结点作为一个线程，第二种则是将每个矩阵行作为一个线程，两者的线程数不相同，而API接口中的入口函数也不同，两种方法都能加速原来的矩阵算法。其中第二种加速较多，第一种由于线程太多，切换线程耗时较多，导致程序完成时间同优化前相差不多。
 
-![mutimatrix](D:\我的文件\实验室\第二次\mutimatrix.png)
+![mutimatrix](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/mutimatrix.png)
 
-![pmutimatrix](D:\我的文件\实验室\第二次\pmutimatrix.png)
+![pmutimatrix](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/pmutimatrix.png)
 
-![pmutimatrix1](D:\我的文件\实验室\第二次\pmutimatrix1.png)
+![pmutimatrix1](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/pmutimatrix1.png)
 
 ## 向量化操作
 
