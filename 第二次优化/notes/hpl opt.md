@@ -84,9 +84,9 @@ HPL.out      output file name (if any)
 
 硬件环境如下
 
-![huanjing1](D:\我的文件\实验室\第二次\huanjing1.png)
+![huanjing1](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/huanjing1.png)
 
-![huanjing2](D:\我的文件\实验室\第二次\huanjing2.png)
+![huanjing2](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/huanjing2.png)
 
 |   N   |  NB  |  P   |  Q   |   Gflops   |
 | :---: | :--: | :--: | :--: | :--------: |
