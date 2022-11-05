@@ -178,3 +178,6 @@ src/ComputeWAXPBY.o src/ComputeWAXPBY_ref.o src/ComputeMG_ref.o src/ComputeMG.o
 src/ComputeProlongation_ref.o src/ComputeRestriction_ref.o src/CheckAspectRatio.o
 src/OutputFile.o src/GenerateCoarseProblem.o src/init.o src/finalize.o -o
 bin/xhpcg
+non@non-virtual-machine:~/hpcg/setup/build/bin$ ls
+hpcg20221010T141658.txt hpcg20221010T142012.txt HPCG-Benchmark_3.1_2022-10-
+10_14-19-01.txt HPCG-Benchmark_3.1_2022-10-10_14-21-55.txt hpcg.dat xhpcg
