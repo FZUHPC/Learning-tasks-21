@@ -13,14 +13,14 @@
 
 **使用 `su -` 切换身份成为 root后， 下达 `ls -al`看看，会显示文件的文件名与相关属性**
 
-![wjsx](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/gendr1.png)
+![wjsx](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/wjsx.png)
 
 > `ls` 是list的意思，重点在显示文件的文件名与相关属性。而选项`-al`则表示列出所有的文件详
 > 细的权限与属性 (包含隐藏文件，就是文件名第一个字符为 `.` 的文件)
 
 **显示的文件属性示意图如下：**
 
-![wjquanxian](D:\我的文件\实验室\第二次\wjquanxian.png)
+![wjquanxian](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/wjquanxian.png)
 
 - ##### 第一栏代表这个文件的类型与权限(permission)：
 
@@ -46,7 +46,7 @@
 >
 > 第三组：**非本人且没有加入本群组之其他账号的权限**。
 
-![rwx](D:\我的文件\实验室\第二次\rwx.png)
+![rwx](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/rwx.png)
 
 
 
@@ -220,16 +220,16 @@ xyz : 就是刚刚提到的数字类型的权限属性，为 rwx 属性数值的
 
 1. **根目录**
 
-![gendr1](D:\我的文件\实验室\第二次\gendr1.png)
+![gendr1](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/gendr1.png)
 
-![gendr2](D:\我的文件\实验室\第二次\gendr2.png)
+![gendr2](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/gendr2.png)
 
-![gendr3](D:\我的文件\实验室\第二次\gendr3.png)
+![gendr3](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/gendr3.png)
 
-![gendr4](D:\我的文件\实验室\第二次\gendr4.png)
+![gendr4](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/gendr4.png)
 
 2. **/usr**
 
-![usr1](D:\我的文件\实验室\第二次\usr1.png)
+![usr1](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/usr1.png)
 
-![usr2](D:\我的文件\实验室\第二次\usr2.png)
+![usr2](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/usr2.png)
