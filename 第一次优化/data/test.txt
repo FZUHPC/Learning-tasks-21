@@ -1,0 +1,205 @@
+non@non-virtual-machine:~/hpl-2.3$ make arch=test
+make -f Make.top startup_dir arch=test
+make[1]: 进入目录“/home/non/hpl-2.3”
+mkdir -p include/test
+mkdir -p lib
+mkdir -p lib/test
+mkdir -p bin
+mkdir -p bin/test
+make[1]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top startup_src arch=test
+make[1]: 进入目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=src/auxil arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd src/auxil ; mkdir -p test )
+( cd src/auxil/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=src/blas arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd src/blas ; mkdir -p test )
+( cd src/blas/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=src/comm arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd src/comm ; mkdir -p test )
+( cd src/comm/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=src/grid arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd src/grid ; mkdir -p test )
+( cd src/grid/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=src/panel arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd src/panel ; mkdir -p test )
+( cd src/panel/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=src/pauxil arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd src/pauxil ; mkdir -p test )
+( cd src/pauxil/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=src/pfact arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd src/pfact ; mkdir -p test )
+( cd src/pfact/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=src/pgesv arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd src/pgesv ; mkdir -p test )
+( cd src/pgesv/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make[1]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top startup_tst arch=test
+make[1]: 进入目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=testing/matgen arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd testing/matgen ; mkdir -p test )
+( cd testing/matgen/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=testing/timer arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd testing/timer ; mkdir -p test )
+( cd testing/timer/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=testing/pmatgen arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd testing/pmatgen ; mkdir -p test )
+( cd testing/pmatgen/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=testing/ptimer arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd testing/ptimer ; mkdir -p test )
+( cd testing/ptimer/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top leaf le=testing/ptest arch=test
+make[2]: 进入目录“/home/non/hpl-2.3”
+( cd testing/ptest ; mkdir -p test )
+( cd testing/ptest/test ; \
+ln -fs /home/non/hpl-2.3/Make.test Make.inc )
+make[2]: 离开目录“/home/non/hpl-2.3”
+make[1]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top refresh_src arch=test
+make[1]: 进入目录“/home/non/hpl-2.3”
+cp makes/Make.auxil src/auxil/test/Makefile
+cp makes/Make.blas src/blas/test/Makefile
+cp makes/Make.comm src/comm/test/Makefile
+cp makes/Make.grid src/grid/test/Makefile
+cp makes/Make.panel src/panel/test/Makefile
+cp makes/Make.pauxil src/pauxil/test/Makefile
+cp makes/Make.pfact src/pfact/test/Makefile
+cp makes/Make.pgesv src/pgesv/test/Makefile
+make[1]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top refresh_tst arch=test
+make[1]: 进入目录“/home/non/hpl-2.3”
+cp makes/Make.matgen testing/matgen/test/Makefile
+cp makes/Make.timer testing/timer/test/Makefile
+cp makes/Make.pmatgen testing/pmatgen/test/Makefile
+cp makes/Make.ptimer testing/ptimer/test/Makefile
+cp makes/Make.ptest testing/ptest/test/Makefile
+make[1]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top refresh_src arch=test
+make[1]: 进入目录“/home/non/hpl-2.3”
+cp makes/Make.auxil src/auxil/test/Makefile
+cp makes/Make.blas src/blas/test/Makefile
+cp makes/Make.comm src/comm/test/Makefile
+cp makes/Make.grid src/grid/test/Makefile
+cp makes/Make.panel src/panel/test/Makefile
+cp makes/Make.pauxil src/pauxil/test/Makefile
+cp makes/Make.pfact src/pfact/test/Makefile
+cp makes/Make.pgesv src/pgesv/test/Makefile
+make[1]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top refresh_tst arch=test
+make[1]: 进入目录“/home/non/hpl-2.3”
+cp makes/Make.matgen testing/matgen/test/Makefile
+cp makes/Make.timer testing/timer/test/Makefile
+cp makes/Make.pmatgen testing/pmatgen/test/Makefile
+cp makes/Make.ptimer testing/ptimer/test/Makefile
+cp makes/Make.ptest testing/ptest/test/Makefile
+make[1]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top build_src arch=test
+make[1]: 进入目录“/home/non/hpl-2.3”
+( cd src/auxil/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/src/auxil/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/src/auxil/test”
+( cd src/blas/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/src/blas/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/src/blas/test”
+( cd src/comm/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/src/comm/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/src/comm/test”
+( cd src/grid/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/src/grid/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/src/grid/test”
+( cd src/panel/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/src/panel/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/src/panel/test”
+( cd src/pauxil/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/src/pauxil/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/src/pauxil/test”
+( cd src/pfact/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/src/pfact/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/src/pfact/test”
+运行 mpirun ./xhpl
+( cd src/pgesv/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/src/pgesv/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/src/pgesv/test”
+make[1]: 离开目录“/home/non/hpl-2.3”
+make -f Make.top build_tst arch=test
+make[1]: 进入目录“/home/non/hpl-2.3”
+( cd testing/matgen/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/testing/matgen/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/testing/matgen/test”
+( cd testing/timer/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/testing/timer/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/testing/timer/test”
+( cd testing/pmatgen/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/testing/pmatgen/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/testing/pmatgen/test”
+( cd testing/ptimer/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/testing/ptimer/test”
+make[2]: 对“all”无需做任何事。
+make[2]: 离开目录“/home/non/hpl-2.3/testing/ptimer/test”
+( cd testing/ptest/test; make )
+make[2]: 进入目录“/home/non/hpl-2.3/testing/ptest/test”
+mpiicc -DAdd__ -DF77_INTEGER=int -DStringSunStyle -DHPL_DETAILED_TIMING -
+DHPL_PROGRESS_REPORT -I/home/non/hpl-2.3/include -I/home/non/hpl-2.3/include/test
+-I/opt/intel/oneapi/mkl/2022.1.0/mkl/include -O3 -w -ansi-alias -i-static -z
+noexecstack -z relro -z now -nocompchk -Wall -qopenmp -mt_mpi -o /home/non/hpl-
+2.3/bin/test/xhpl HPL_pddriver.o HPL_pdinfo.o HPL_pdtest.o
+/home/non/hpl-2.3/lib/test/libhpl.a -
+L/opt/intel/oneapi/mkl/2022.1.0/mkl/lib/intel64 -Wl,--start-group
+/opt/intel/oneapi/mkl/2022.1.0/lib/intel64/libmkl_intel_lp64.a
+/opt/intel/oneapi/mkl/2022.1.0/lib/intel64/libmkl_intel_thread.a
+/opt/intel/oneapi/mkl/2022.1.0/lib/intel64/libmkl_core.a -Wl,--end-group -
+lpthread -ldl
+make /home/non/hpl-2.3/bin/test/HPL.dat
+make[3]: 进入目录“/home/non/hpl-2.3/testing/ptest/test”
+( cp ../HPL.dat /home/non/hpl-2.3/bin/test )
+make[3]: 离开目录“/home/non/hpl-2.3/testing/ptest/test”
+touch dexe.grd
+make[2]: 离开目录“/home/non/hpl-2.3/testing/ptest/test”
+make[1]: 离开目录“/home/non/hpl-2.3”
