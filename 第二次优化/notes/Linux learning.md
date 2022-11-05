@@ -13,7 +13,7 @@
 
 **使用 `su -` 切换身份成为 root后， 下达 `ls -al`看看，会显示文件的文件名与相关属性**
 
-![wjsx]([D:\我的文件\实验室\第二次\wjsx.png](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/gendr1.png))
+![wjsx](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/gendr1.png)
 
 > `ls` 是list的意思，重点在显示文件的文件名与相关属性。而选项`-al`则表示列出所有的文件详
 > 细的权限与属性 (包含隐藏文件，就是文件名第一个字符为 `.` 的文件)
