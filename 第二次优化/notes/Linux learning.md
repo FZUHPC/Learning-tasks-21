@@ -1,0 +1,235 @@
+- ## Linux文件权限与目录
+
+- #### 用户与用户组
+
+**主要有三种用户身份：文件拥有者、用户组、其他人**
+
+> 在我们 Linux 系统当中，默认的情况下，所有的系统上的账号与一般身份使用者，还有那个 root 的相
+> 关信息，都是记录在/etc/passwd 这个文件内的。至于个人的密码则是记录在/etc/shadow 这个文件下。
+> 此外，Linux 所有的组名都纪录在/etc/group 内！这三个文件可以说是 Linux 系统里面账号、密码、群
+> 组信息的集中地
+
+- #### Linux文件属性
+
+**使用 `su -` 切换身份成为 root后， 下达 `ls -al`看看，会显示文件的文件名与相关属性**
+
+![wjsx](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/wjsx.png)
+
+> `ls` 是list的意思，重点在显示文件的文件名与相关属性。而选项`-al`则表示列出所有的文件详
+> 细的权限与属性 (包含隐藏文件，就是文件名第一个字符为 `.` 的文件)
+
+**显示的文件属性示意图如下：**
+
+![wjquanxian](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/wjquanxian.png)
+
+- ##### 第一栏代表这个文件的类型与权限(permission)：
+
+###### 第一个字符代表这个文件是『目录、文件或链接文件等等』：
+
+1. 当为[ d ]则是目录，例如上表档名为`.config`的那一行；
+2. 当为[ - ]则是文件，例如上表档名为`initial-setup-ks.cfg`那一行；
+3. 若是[ l ]则表示为连结档(link file)； 
+4. 若是[ b ]则表示为装置文件里面的可供储存的接口设备(可随机存取装置)；
+5. 若是[ c ]则表示为装置文件里面的串行端口设备，例如键盘、鼠标(一次性读取装置)。 
+
+
+
+###### 接下来的字符中，以三个为一组，且均为`rwx` 的三个参数的组合。其中，**[ r ]代表可读(read)、[ w ]代表可写(write)、[ x ]代表可执行(execute)**。 要注意的是，这三个权限的位置不会改变，如果没有权限，就会出现减号[ - ]而已。
+
+
+
+> 第一组：**文件拥有者可具备的权限**，以`initial-setup-ks.cfg`那个文件为例， 该文件的拥有者
+>
+> 可以读写，但不可执行；
+>
+> 第二组：**加入此群组之账号的权限**
+>
+> 第三组：**非本人且没有加入本群组之其他账号的权限**。
+
+![rwx](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/rwx.png)
+
+
+
+- ##### 第二栏表示有多少档名连结到此节点(i-node)
+
+- ##### 第三栏表示这个文件(或目录)的 拥有者账号
+
+- ##### 第四栏表示这个文件的所属群组
+
+- ##### 第五栏为这个文件的容量大小，默认单位为 bytes
+
+- ##### 第六栏为这个文件的建档日期或者是最近的修改日期
+
+> 这一栏的内容分别为日期(月/日)及时间。如果这个文件被修改的时间距离现在太久了，那么时间部分
+> 会仅显示年份而已。如果想要显示完整的时间格式，可以利用 `ls` 的选项，亦即：`ls -l --full-time`就能够显示出完整的时间格式了。
+
+- ##### 第七栏为这个文件的档名
+
+> 如果档名之前多一个 `.` ，则代表这个文件为“隐藏档”，例如上表中的`.config` 那一行，该文件就是隐藏档。
+
+- #### 修改文件属性与权限
+
+> `chgrp` ：改变文件所属群组
+> `chown` ：改变文件拥有者
+> `chmod` ：改变文件的权限, SUID, SGID, SBIT 等等的特性
+
+- ##### 改变所属群组`chgrp`
+
+**`chgrp`即change group，要被改变的组名必须要在/etc/group 文件内存在才行，否则就会显示错误，格式如下：**
+
+ `chgrp [-R] dirname/filename ...`
+
+> 选项与参数： -R : 进行递归(recursive)的持续变更，亦即连同次目录下的所有文件、目录
+>
+> 都更新成为这个群组之意。常常用在变更某一目录内所有的文件之情况。
+
+```
+范例：
+[root@study ~]# chgrp users initial-setup-ks.cfg
+[root@study ~]# ls -l 
+-rw-r--r--. 1 root users 1864 May 4 18:01 initial-setup-ks.cfg
+[root@study ~]# chgrp testing initial-setup-ks.cfg
+chgrp: invalid group: `testing' <==找不到这个群组名
+```
+
+- ##### 改变文件拥有者 `chown`
+
+**`chown` 即change own，必须是已经存在系统中的账号，也就是在/etc/passwd 这个文件中有纪录的用户名称才能改变，他还可以顺便直接修改群组的名称。**
+
+```
+chown [-R] 账号名称 文件或目录
+chown [-R] 账号名称:组名 文件或目录
+```
+
+> 选项与参数： -R : 进行递归(recursive)的持续变更，亦即连同次目录下的所有文件都变更
+
+```
+范例：将 initial-setup-ks.cfg 的拥有者改为 bin 这个账号：
+[root@study ~]# chown bin initial-setup-ks.cfg
+[root@study ~]# ls -l 
+-rw-r--r--. 1 bin users 1864 May 4 18:01 initial-setup-ks.cfg
+范例：将 initial-setup-ks.cfg 的拥有者与群组改回为 root：
+[root@study ~]# chown root:root initial-setup-ks.cfg
+[root@study ~]# ls -l 
+-rw-r--r--. 1 root root 1864 May 4 18:01 initial-setup-ks.cfg
+```
+
+> 事实上，chown 也可以使用`chown user.group file`，亦即在拥有者与群组间加上小数
+> 点`.` 也可以，不过很多人设定账号时，喜欢在账号当中加入小数点(例如 vbird.tsai 这样的账号格式)，这就会造成系统的误判了！ 所以比较建议使用冒号`:`来隔开拥有者与群组。此外，chown 也能单纯的修改所属群组， 例如`chown .sshd initial-setup-ks.cfg`就是修改群组。
+
+**那么什么时候使用chgrp和chown呢？由于复制行为(cp)会复制执行者的属性与权限， 所以你就必须要将这个文件的拥有者与群组修改一下。**
+
+ `cp 来源文件 目标文件`
+
+- ##### 改变权限 `chmod`
+
+1. **数字类型改变文件权限**
+
+**Linux 文件的基本权限就有九个，分别是 owner/group/others 三种身份各有自己的 read/write/execute 权限，其中，我们可以使用数字来代表各个权限，各权限的分数对照表如下：**
+
+`r:4  w:2  x:1`
+
+**每种身份(owner/group/others)各自的三个权限(r/w/x)分数是需要累加的，例如当权限为： [-rwxrwx---] 分数，则是：**
+
+> owner = rwx = 4+2+1 = 7
+> group = rwx = 4+2+1 = 7
+> others= --- = 0+0+0 = 0
+
+```
+chmod [-R] xyz 文件或目录
+选项与参数：
+xyz : 就是刚刚提到的数字类型的权限属性，为 rwx 属性数值的相加。
+-R : 进行递归(recursive)的持续变更，亦即连同次目录下的所有文件都会变更
+```
+
+常常我们以 vim编辑一个 shell 的文字批处理文件后，他的权限通常是 -rw-rw-r-- 也就是 664， 如果要将该文件变成可执行文件，并且不要让其他人修改此一文件的话， 那么就需要-rwxr-xr-x 这样的权限，此时就得要下达：`chmod 755 test.sh` 的指令。
+
+2. **符号类型改变文件权限**
+
+**(1)user (2)group (3)others 三种身份我们就可以藉由 u, g, o 来代表三种身份的权限， a 则代表 all 亦即全部身份，那么读写的权限就可以写成 r, w, x 。**
+
+| chmod | u，g，o，a | +(加法)、-(除去)、=(设定) | r,w,x | 文件或目录 |
+| :---: | ---------- | ------------------------- | ----- | ---------- |
+
+```
+例如：
+[root@study ~]# u=rwx,go=rx .bashrc
+# 注意喔！那个 u=rwx,go=rx 是连在一起的，中间并没有任何空格符！
+[root@study ~]# ls -al .bashrc
+-rwxr-xr-x. 1 root root 176 Dec 29 2013 .bashrc
+[root@study ~]# chmod a+w .bashrc
+[root@study ~]# ls -al .bashrc
+-rwxrwxrwx. 1 root root 176 Dec 29 2013 .bashrc
+[root@study ~]# chmod a-x .bashrc
+[root@study ~]# ls -al .bashrc
+-rw-rw-rw-. 1 root root 176 Dec 29 2013 .bashrc
+```
+
+**与 – 的状态下，只要是没有指定到的项目，则该权限不会被变动，例如上面的例子中，由于仅以 – 拿掉 x 则其他两个保持当时的值不变！**
+
+- #### 文件与目录的权限意义
+
+##### 权限对文件的重要性
+
+> r (read)：可读取此一文件的实际内容，如读取文本文件的文字内容等；
+>
+> w (write)：可以编辑、新增或者是修改该文件的内容(但不含删除该文件)；
+>
+> x (eXecute)：该文件具有可以被系统执行的权限。
+>
+> 我们的文件是否能被执行，则是藉由是否具有 x 这个权限来决定的，跟文件名是没有绝对的关系的。当你对一个文件具有 w 权限时，你可以具有写入/编辑/新增/修改文件的内容的权限， 但并不具备有删除该文件本身的权限。
+
+##### 权限对目录的重要性
+
+1. **r (read contents in directory)**：
+
+	表示具有读取目录结构列表的权限，所以当你具有读取(r)一个目录的权限时，表示你可以查询该目录下的文件名数据。 所以你就可以利用 `ls` 这个指令将该目录的内容列表显示出来。
+
+2. **w (modify contents of directory)：**
+	这个可写入的权限对目录来说，是很了不起的！ 因为他表示你具有异动该目录结构列表的权限，也就是底
+	下这些权限：
+
+	1. **建立**新的文件与目录；
+	2. **删除**已经存在的文件与目录(不论该文件的权限为何！) 
+
+	3. 将已存在的文件或目录进行**更名**；
+	4. **搬移**该目录内的文件、目录位置。
+
+3. ##### x (access directory)：
+
+	目录的 x 代表的是用户能否进入该目录成为工作目录的用途，举例来说，当你登入 Linux 时， 你所在的家目录就是你当下的工作目录。变换目录的指令是`cd`(change directory)。
+
+##### 小总结
+
+| 组件 |       内容       |  替代对象  |      r       |      w       |        x         |
+| ---- | :--------------: | :--------: | :----------: | :----------: | :--------------: |
+| 文件 | 详细数据（data） |   文件夹   | 读到文件内容 | 修改文件内容 |   执行文件内容   |
+| 目录 |      文件名      | 可分类抽屉 |  读到文件名  |  修改文件名  | 进入该目录的权限 |
+
+> 也就是说，如果你在某目录下不具有 x 的权限， 那么你就无法切换到该目录下，也就无法执行该目录下的任何指令，即使你具有该目录的 r 或 w 的权限。 x 在目录当中是与能否进入该目录有关， 至于那个 w 则具有相当重要的权限，因为他可以让使用者删除、更新、新建文件或目录， 是个很重要的参数。
+
+|       **操作动作**        | **/dir1** | **/dir1/file1** | **/dir2** |                   **重点**                   |
+| :-----------------------: | :-------: | :-------------: | :-------: | :------------------------------------------: |
+|    **读取 file1 内容**    |   **x**   |      **r**      |   **-**   | **要能够进入 /dir1 才能读到里面的文件数据**  |
+|    **修改 file1 内容**    |   **x**   |     **rw**      |   **-**   |     **能够进入 /dir1 且修改 file1 才行**     |
+|    **执行 file1 内容**    |   **x**   |     **rx**      |   **-**   |    **能够进入 /dir1 且 file1 能运作才行**    |
+|    **删除 file1 文件**    |  **wx**   |      **-**      |   **-**   |  **能够进入 /dir1 具有目录修改的权限即可**   |
+| **将 file1 复制到 /dir2** |   **x**   |      **r**      |  **wx**   | **要能够读 file1 且能够修改 /dir2 内的数据** |
+
+- #### Linux的目录配置
+
+1. **根目录**
+
+![gendr1](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/gendr1.png)
+
+![gendr2](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/gendr2.png)
+
+![gendr3](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/gendr3.png)
+
+![gendr4](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/gendr4.png)
+
+2. **/usr**
+
+![usr1](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/usr1.png)
+
+![usr2](https://github.com/xylnon/Learning-tasks-21/blob/assignment/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E4%BC%98%E5%8C%96/pictures/usr2.png)

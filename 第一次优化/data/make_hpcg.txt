@@ -1,0 +1,183 @@
+non@non-virtual-machine:~/hpcg/setup/build$ /home/non/hpcg/configure Linux_MPI
+non@non-virtual-machine:~/hpcg/setup/build$ make
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/main.cpp -o src/main.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/CG.cpp -o src/CG.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/CG_ref.cpp -o src/CG_ref.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/TestCG.cpp -o src/TestCG.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeResidual.cpp -o src/ComputeResidual.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ExchangeHalo.cpp -o src/ExchangeHalo.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/GenerateGeometry.cpp -o src/GenerateGeometry.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/GenerateProblem.cpp -o src/GenerateProblem.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/GenerateProblem_ref.cpp -o src/GenerateProblem_ref.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/CheckProblem.cpp -o src/CheckProblem.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/MixedBaseCounter.cpp -o src/MixedBaseCounter.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/OptimizeProblem.cpp -o src/OptimizeProblem.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ReadHpcgDat.cpp -o src/ReadHpcgDat.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ReportResults.cpp -o src/ReportResults.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/SetupHalo.cpp -o src/SetupHalo.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/SetupHalo_ref.cpp -o src/SetupHalo_ref.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/TestSymmetry.cpp -o src/TestSymmetry.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/TestNorms.cpp -o src/TestNorms.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/WriteProblem.cpp -o src/WriteProblem.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/YAML_Doc.cpp -o src/YAML_Doc.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/YAML_Element.cpp -o src/YAML_Element.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeDotProduct.cpp -o src/ComputeDotProduct.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeDotProduct_ref.cpp -o src/ComputeDotProduct_ref.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/mytimer.cpp -o src/mytimer.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeOptimalShapeXYZ.cpp -o src/ComputeOptimalShapeXYZ.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeSPMV.cpp -o src/ComputeSPMV.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeSPMV_ref.cpp -o src/ComputeSPMV_ref.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeSYMGS.cpp -o src/ComputeSYMGS.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeSYMGS_ref.cpp -o src/ComputeSYMGS_ref.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeWAXPBY.cpp -o src/ComputeWAXPBY.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeWAXPBY_ref.cpp -o src/ComputeWAXPBY_ref.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeMG_ref.cpp -o src/ComputeMG_ref.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeMG.cpp -o src/ComputeMG.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeProlongation_ref.cpp -o src/ComputeProlongation_ref.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/ComputeRestriction_ref.cpp -o src/ComputeRestriction_ref.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/CheckAspectRatio.cpp -o src/CheckAspectRatio.o
+运行测试
+可以发现在build目录里有一个.dat文件以及xhpcg可执行文件
+接着运行即可 ./xhpcg
+总结一下
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/OutputFile.cpp -o src/OutputFile.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/GenerateCoarseProblem.cpp -o src/GenerateCoarseProblem.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/init.cpp -o src/init.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -c -DHPCG_NO_OPENMP -
+I/Home/non/hpcg/src -I/Home/non/hpcg/src/Linux_MPI -
+I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -qopenmp -mavx -I/home/non/hpcg/src
+/home/non/hpcg/src/finalize.cpp -o src/finalize.o
+/opt/intel/oneapi/mpi/2021.6.0/bin/mpiicpc -DHPCG_NO_OPENMP -I/Home/non/hpcg/src
+-I/Home/non/hpcg/src/Linux_MPI -I/opt/intel/oneapi/mpi/2021.6.0/include -O3 -
+qopenmp -mavx src/main.o src/CG.o src/CG_ref.o src/TestCG.o src/ComputeResidual.o
+src/ExchangeHalo.o src/GenerateGeometry.o src/GenerateProblem.o
+src/GenerateProblem_ref.o src/CheckProblem.o src/MixedBaseCounter.o
+src/OptimizeProblem.o src/ReadHpcgDat.o src/ReportResults.o src/SetupHalo.o
+src/SetupHalo_ref.o src/TestSymmetry.o src/TestNorms.o src/WriteProblem.o
+src/YAML_Doc.o src/YAML_Element.o src/ComputeDotProduct.o
+src/ComputeDotProduct_ref.o src/mytimer.o src/ComputeOptimalShapeXYZ.o
+src/ComputeSPMV.o src/ComputeSPMV_ref.o src/ComputeSYMGS.o src/ComputeSYMGS_ref.o
+src/ComputeWAXPBY.o src/ComputeWAXPBY_ref.o src/ComputeMG_ref.o src/ComputeMG.o
+src/ComputeProlongation_ref.o src/ComputeRestriction_ref.o src/CheckAspectRatio.o
+src/OutputFile.o src/GenerateCoarseProblem.o src/init.o src/finalize.o -o
+bin/xhpcg
+non@non-virtual-machine:~/hpcg/setup/build/bin$ ls
+hpcg20221010T141658.txt hpcg20221010T142012.txt HPCG-Benchmark_3.1_2022-10-
+10_14-19-01.txt HPCG-Benchmark_3.1_2022-10-10_14-21-55.txt hpcg.dat xhpcg
