@@ -1,0 +1,21 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-m64",
+      "-std=c++17",
+      "-I.",
+      "-O3",
+      "-Wall",
+      "-fopenmp",
+      "-Wno-unknown-pragmas",
+      "-c",
+      "-o",
+      "wireroute.o",
+      "wireroute.cpp"
+    ],
+    "directory": "/home/clares/code/cmu-parllel/assignment3/code",
+    "file": "/home/clares/code/cmu-parllel/assignment3/code/wireroute.cpp",
+    "output": "/home/clares/code/cmu-parllel/assignment3/code/wireroute.o"
+  }
+]
